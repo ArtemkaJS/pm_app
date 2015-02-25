@@ -1,0 +1,17 @@
+local: &local
+  adapter: postgresql
+  username: artemkajs
+  password: 29b930
+  host: localhost
+
+development:
+  <<: *local
+  database: pm_dev
+
+test:
+  <<: *local
+  database: pm_test
+
+production:
+  <<: *local
+  database: pm_production
